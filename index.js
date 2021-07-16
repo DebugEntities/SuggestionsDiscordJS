@@ -22,7 +22,7 @@ const statusMessages = {
 
 client.on("message", (message) => {
 	const { channel, member, content } = message;
-	if (channel.id === "863731908096819250" && !member.user.bot) {
+	if (channel.id === "863836073696034887" && !member.user.bot) {
 		message.delete();
 		const embed = new Discord.MessageEmbed()
 			.setColor(statusMessages.Waiting.color)
@@ -44,7 +44,7 @@ client.on("message", (message) => {
 client.on("messageReactionAdd", (reaction, user) => {
 	const { member } = reaction.message;
 	if (
-		reaction.message.channel.id === "863731908096819250" &&
+		reaction.message.channel.id === "863836073696034887" &&
 		user.id === "635080966829899805" &&
 		reaction.emoji.name === "👍"
 	) {
